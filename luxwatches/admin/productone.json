@@ -1,0 +1,29 @@
+{
+    "ID": "1",
+    "NAME": "TITAN NN1843QL01",
+    "DESCRIPTION": "Edge Watch with Blue Dial in Anthracite Case",
+    "IMAGEID": "1J0ceaF7mPennRq31bGJmJ-hZvCI0rxZs,1Q0j92qzgampKYqtLFj4HqF0kF4PMP4rb,13sn-RaFnu3h1fm2rQ5K3VVgTnZ2B3kdy",
+    "PRICE": "12000",
+    "CATEGORY": {
+        "ID": "1",
+        "NAME": "Men's Watches",
+        "DESCRIPTION": "djdjsfksdmfmkdssdfnmsdmf",
+        "IMAGEID": "",
+        "ISDELETED": "0"
+    },
+    "COMPANY": {
+        "ID": "1",
+        "NAME": "TITAN",
+        "LOGO": "",
+        "ISDELETED": "0"
+    },
+    "STOCK": {
+        "ID": "1",
+        "QUNATITY": "10",
+        "MODIFIEDAT": ""
+    },
+    "ISDELETED": "0",
+    "MODIFIEDAT": "",
+    "CREATEDAT": "",
+    "ISPUBLISHED": "1"
+}

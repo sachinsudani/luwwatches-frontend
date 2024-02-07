@@ -1,0 +1,26 @@
+<div class="container">
+    <div style="height: 80vh; overflow: auto">
+        <table class="table table-hover">
+            <tbody id="productTable">
+                <tr class="sticky-top shadow-sm" style="background: #fff;">
+                    <th class="px-3">#</th>
+                    <th class="px-3">Customer Name</th>
+                    <th class="px-3">Ordered items</th>
+                    <th class="px-3">Total price</th>
+                    <th class="px-3">Placed At</th>
+                    <th class="px-3">Status</th>
+                </tr>
+                <tr ng-repeat="order in orders" class="order">
+                    <td class="p-3">{{ order.id }}</td>
+                    <td class="p-3">{{ order.CUSTOMER }}</td>
+                    <td class="p-3">{{ order.ORDEREDPRODUCTS }}</td>
+                    <td class="p-3">{{ order.TOTALPRICE }}</td>
+                    <td class="p-3">{{ order.CREATEDAT }}</td>
+                    <td class="p-3">
+                        <span class="px-2 py-1 bg-warning rounded-pill">{{ order.STATUS }}</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

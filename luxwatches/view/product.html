@@ -1,0 +1,275 @@
+<div class="container content-wrapper">
+    <div class="row main-row">
+        <main
+            id="primary"
+            class="
+                site-main
+                no-sidebar
+                botiga-tabs-style1 botiga-tabs-align-left
+            "
+        >
+            <nav class="woocommerce-breadcrumb">
+                <a href="#!/">Home</a
+                >&nbsp;&#47;&nbsp;<a
+                    href="#!/category/{{product.CATEGORY['ID']}}"
+                    >{{ product.CATEGORY['NAME'] }}</a
+                >&nbsp;&#47;&nbsp;{{ product.NAME }}
+            </nav>
+
+            <div class="woocommerce-notices-wrapper"></div>
+            <div
+                id="product-95"
+                class="
+                    product
+                    type-product
+                    post-95
+                    status-publish
+                    first
+                    instock
+                    product_cat-cosmetics
+                    has-post-thumbnail
+                    shipping-taxable
+                    purchasable
+                    product-type-simple
+                "
+            >
+                <div
+                    class="product-gallery-summary gallery-vertical"
+                >
+                    <div
+                        class="
+                            woocommerce-product-gallery
+                            woocommerce-product-gallery--with-images
+                            woocommerce-product-gallery--columns-4
+                            images
+                        "
+                        data-columns="4"
+                        style="
+                            opacity: 1;
+                            transition: opacity 0.25s ease-in-out;
+                        "
+                    >
+                        <img src="http://localhost:3000/luxwatchesapi/images/{{product.IMAGEPATH}}" alt="" srcset="">
+                    </div>
+
+                    <div class="summary entry-summary">
+                        <h1 class="product_title entry-title">
+                            {{product.NAME}}
+                        </h1>
+                        <p class="price">
+                            <span
+                                class="
+                                    woocommerce-Price-amount
+                                    amount
+                                "
+                                ><bdi
+                                    ><span
+                                        class="
+                                            woocommerce-Price-currencySymbol
+                                        "
+                                        >&#x20B9;</span
+                                    >{{product.PRICE}}</bdi
+                                ></span
+                            >
+                        </p>
+                        <div
+                            class="
+                                woocommerce-product-details__short-description
+                            "
+                        >
+                            <p>
+                                {{product.DESCRIPTION}}
+                            </p>
+                        </div>
+
+                        <form
+                            class="cart"
+                            action=""
+                            method="post"
+                            enctype="multipart/form-data"
+                        >
+                            <div
+                                class="
+                                    botiga-single-addtocart-wrapper
+                                "
+                            >
+                                <div class="quantity">
+                                    <label
+                                        class="screen-reader-text"
+                                        for="quantity_6157d0de170d7"
+                                        >{{product.NAME}}</label
+                                    >
+                                    <input
+                                        type="number"
+                                        id="quantity_6157d0de170d7"
+                                        class="input-text qty text"
+                                        step="1"
+                                        min="1"
+                                        max=""
+                                        name="quantity"
+                                        value="1"
+                                        title="Qty"
+                                        size="4"
+                                        placeholder=""
+                                        inputmode="numeric"
+                                    />
+                                </div>
+
+                                <a
+                                    id="addToCart"
+                                    href="#!add/{{product.ID}}"
+                                    name="add-to-cart"
+                                    value="95"
+                                    class="
+                                        single_add_to_cart_button
+                                        button
+                                        alt
+                                    "
+                                    style="text-align: center;"
+                                >
+                                    Add to cart
+                            </a>
+                            </div>
+                        </form>
+
+                        <div class="product_meta">
+                            <span class="posted_in"
+                                >CATEGORY:
+                                <a
+                                    href="!#/category/{{product.CATEGORY['ID']}}"
+                                    rel="tag"
+                                    >{{product.CATEGORY["NAME"]}}</a
+                                ></span
+                            >
+                        </div>
+                        <div class="product_meta" style="margin: 0; padding: 0;">
+                            <span class="posted_in"
+                                >COMPANY:
+                                <a
+                                    href="!#/category/{{product.COMPANY['ID']}}"
+                                    rel="tag"
+                                    >{{product.COMPANY["NAME"]}}</a
+                                ></span
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <section class="related products">
+                    <h2>Related products</h2>
+
+                    <ul class="products columns-3" style="display: flex; align-items: center; gap: 0px 0px; justify-content: center;flex-wrap: wrap;">
+                        <li
+                            class="
+                                product
+                                type-product
+                                post-40
+                                status-publish
+                                first
+                                instock
+                                product_cat-cosmetics
+                                has-post-thumbnail
+                                sale
+                                shipping-taxable
+                                purchasable
+                                product-type-simple
+                            "
+                            ng-repeat="product in related"
+                            style="flex-shrink: 3;width: 320px;"
+                        >
+                            <div
+                                class="
+                                    loop-image-wrap
+                                    botiga-add-to-cart-button-layout2
+                                    botiga-quick-view-button-layout2
+                                "
+                            >
+                                <a
+                                    href="./../facial-treatment-essence-pitera-essence/index.html"
+                                    class="
+                                        woocommerce-LoopProduct-link
+                                        woocommerce-loop-product__link
+                                    "
+                                >
+                                    <img
+                                        width="420"
+                                        height="504"
+                                        src="http://localhost:3000/luxwatchesapi/images/{{product.IMAGEPATH}}"
+                                        class="
+                                            attachment-woocommerce_thumbnail
+                                            size-woocommerce_thumbnail
+                                        "
+                                        alt=""
+                                        loading="lazy"
+                                    /> </a
+                                ><a
+                                    href="#"
+                                    class="
+                                        button
+                                        botiga-quick-view-show-on-hover
+                                        botiga-quick-view
+                                        botiga-quick-view-layout2
+                                    "
+                                    aria-label="Quick view the 0 product"
+                                    data-product-id="40"
+                                    data-nonce="8211f76dd0"
+                                >
+                                    Quick View
+                                </a>
+                            </div>
+                            <h2
+                                class="
+                                    woocommerce-loop-product__title
+                                "
+                            >
+                            {{product.NAME}}
+                            </h2>
+                            <span class="price"
+                                >
+                                <ins
+                                    ><span
+                                        class="
+                                            woocommerce-Price-amount
+                                            amount
+                                        "
+                                        ><bdi
+                                            ><span
+                                                class="
+                                                    woocommerce-Price-currencySymbol
+                                                "
+                                                >&#x20B9;</span
+                                            >{{product.PRICE}}</bdi
+                                        ></span
+                                    ></ins
+                                ></span
+                            >
+                            <div
+                                class="
+                                    loop-button-wrap
+                                    button-layout2
+                                "
+                            >
+                                <a
+                                    href="./index.html?add-to-cart=40"
+                                    data-quantity="1"
+                                    class="
+                                        button
+                                        product_type_simple
+                                        add_to_cart_button
+                                        ajax_add_to_cart
+                                    "
+                                    data-product_id="40"
+                                    data-product_sku=""
+                                    aria-label="Add &ldquo;Facial Treatment Essence (Pitera Essence)&rdquo; to your cart"
+                                    rel="nofollow"
+                                    >Add to cart</a
+                                >
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+        <!-- #main -->
+    </div>
+</div>

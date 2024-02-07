@@ -1,0 +1,161 @@
+<header
+                class="
+                    woocommerce-page-header
+                    woocommerce-page-header-style1
+                    woocommerce-page-header-alignment-center
+                "
+            >
+                <div class="container">
+                    <h1 class="woocommerce-products-header__title page-title">
+                        Shop
+                    </h1>
+                    <div class="page-description">
+                        <p>
+                            State the biggest use case of your product. Briefly
+                            expand on how this will help your customers.
+                        </p>
+                    </div>
+                </div>
+            </header>
+
+            <div class="container content-wrapper">
+                <div class="row main-row">
+                    <main
+                        id="primary"
+                        class="
+                            site-main
+                            no-sidebar
+                            product-category-item-layout1 product-grid
+                        "
+                    >
+                        <header class="woocommerce-products-header"></header>
+                        <div class="woocommerce-notices-wrapper"></div>
+                        <div class="woocommerce-sorting-wrapper">
+                            <div class="row">
+                                <div class="col-md-6 col-6">
+                                    <p class="woocommerce-result-count">
+                                        Showing all 9 results
+                                    </p>
+                                </div>
+                                <div class="col-md-6 col-6 text-align-right">
+                                    <form
+                                        class="woocommerce-ordering"
+                                        method="get"
+                                    >
+                                        <select
+                                            name="orderby"
+                                            class="orderby"
+                                            aria-label="Shop order"
+                                        >
+                                            <option value="menu_order" selected>
+                                                Default sorting
+                                            </option>
+                                            <option value="popularity">
+                                                Sort by popularity
+                                            </option>
+                                            <option value="rating">
+                                                Sort by average rating
+                                            </option>
+                                            <option value="date">
+                                                Sort by latest
+                                            </option>
+                                            <option value="price">
+                                                Sort by price: low to high
+                                            </option>
+                                            <option value="price-desc">
+                                                Sort by price: high to low
+                                            </option>
+                                        </select>
+                                        <input
+                                            type="hidden"
+                                            name="paged"
+                                            value="1"
+                                        />
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul class="products columns-3" style="display: flex; align-items: center; gap: 0px 0px; justify-content: center;flex-wrap: wrap;">
+                            <li
+                                class="
+                                    product
+                                    type-product
+                                    post-42
+                                    status-publish
+                                    first
+                                    instock
+                                    product_cat-cosmetics
+                                    has-post-thumbnail
+                                    shipping-taxable
+                                    purchasable
+                                    product-type-simple
+                                "
+                                ng-repeat="product in products"
+                                style="flex-shrink: 3;width: 320px;"
+                            >
+                                <div
+                                    class="
+                                        loop-image-wrap
+                                        botiga-add-to-cart-button-layout2
+                                        botiga-quick-view-button-layout2
+                                    "
+                                >
+                                    <a
+                                        href="#!/product/{{product.ID}}"
+                                        class="
+                                            woocommerce-LoopProduct-link
+                                            woocommerce-loop-product__link
+                                        "
+                                        ><img
+                                            width="420"
+                                            height="504"
+                                            src="http://localhost:3000/luxwatchesapi/images/{{product.IMAGEPATH}}"
+                                            class="
+                                                attachment-woocommerce_thumbnail
+                                                size-woocommerce_thumbnail
+                                            "
+                                            alt=""
+                                            loading="lazy"
+                                        /> </a
+                                    >
+                                </div>
+                                <h2 class="woocommerce-loop-product__title">
+                                    {{product.NAME}}
+                                </h2>
+                                <span class="price"
+                                    ><span
+                                        class="woocommerce-Price-amount amount"
+                                        ><bdi
+                                            ><span
+                                                class="
+                                                    woocommerce-Price-currencySymbol
+                                                "
+                                                >&#x20B9;</span
+                                            >{{product.PRICE}}</bdi
+                                        ></span
+                                    ></span
+                                >
+                                <div class="loop-button-wrap button-layout2">
+                                    <a
+                                        href="#!add/{{product.ID}}"
+                                        data-quantity="1"
+                                        class="
+                                            button
+                                            product_type_simple
+                                            add_to_cart_button
+                                            ajax_add_to_cart
+                                        "
+                                        data-product_id="42"
+                                        data-product_sku=""
+                                        aria-label="Add &ldquo;Mini Radiant Creamy Concealer and Blush&rdquo; to your cart"
+                                        rel="nofollow"
+                                        >Add to cart</a
+                                    >
+                                </div>
+                            </li>
+                        </ul>
+                    </main>
+                    <!-- #main -->
+                </div>
+            </div>

@@ -1,0 +1,254 @@
+<div class="container content-wrapper">
+    <div class="row main-row">
+        <main id="primary" class="site-main no-sidebar cart-layout1">
+            <article
+                id="post-28"
+                class="post-28 page type-page status-publish hentry"
+            >
+                <header class="entry-header">
+                    <h1 class="entry-title page-title">Cart</h1>
+                </header>
+                <!-- .entry-header -->
+
+                <div class="entry-content">
+                    <div class="woocommerce">
+                        <div class="woocommerce-notices-wrapper"></div>
+                        <div id="cart-empty" style="display: none;">
+                            <p class="cart-empty woocommerce-info">
+                                Your cart is currently empty.
+                            </p>
+                            <p class="return-to-shop">
+                                <a
+                                    class="button wc-backward"
+                                    href="#!shop"
+                                >
+                                    Return to shop
+                                </a>
+                            </p>
+                        </div>
+                        <div id="cart">
+                            <form
+                            class="woocommerce-cart-form"
+                            action="http://localhost:3000/wordpress/cart/"
+                            method="post"
+                        >
+                            <table
+                                class="
+                                    shop_table shop_table_responsive
+                                    cart
+                                    woocommerce-cart-form__contents
+                                "
+                                cellspacing="0"
+                            >
+                                <thead>
+                                    <tr>
+                                        <th class="product-remove">PID</th>
+                                        <th class="product-thumbnail" style="margin: 10px;">
+                                            &nbsp;Image
+                                        </th>
+                                        <th class="product-name">Product</th>
+                                        <th class="product-price">Price</th>
+                                        <th class="product-quantity">
+                                            Quantity
+                                        </th>
+                                        <th class="product-subtotal">
+                                            Subtotal
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr
+                                        class="
+                                            woocommerce-cart-form__cart-item
+                                            cart_item
+                                        "
+                                        ng-repeat="product in orderedProducts"
+                                    >
+
+                                        <td class="product-remove">
+                                            {{product.id}}
+                                        </td>
+                                        <td class="product-thumbnail">
+                                            <a
+                                                href="#/product/{{product.id}}"
+                                                ><img
+                                                    width="100"
+                                                    height="100"
+                                                    src="http://localhost:3000/luxwatchesapi/images/{{product.imagePath}}"
+                                                    class="
+                                                        attachment-woocommerce_thumbnail
+                                                        size-woocommerce_thumbnail
+                                                    "
+                                                    alt=""
+                                                    loading="lazy"
+                                            /></a>
+                                        </td>
+
+                                        <td
+                                            class="product-name"
+                                            data-title="Product"
+                                        >
+                                            <a
+                                                href="#!/product/{{product.id}}"
+                                                >{{product.name}}</a
+                                            >
+                                        </td>
+
+                                        <td
+                                            class="product-price"
+                                            data-title="Price"
+                                        >
+                                            <span
+                                                class="
+                                                    woocommerce-Price-amount
+                                                    amount
+                                                "
+                                                ><bdi
+                                                    ><span
+                                                        class="
+                                                            woocommerce-Price-currencySymbol
+                                                        "
+                                                        >&#x20B9;</span
+                                                    >{{product.price}}</bdi
+                                                ></span
+                                            >
+                                        </td>
+
+                                        <td
+                                            class="product-quantity"
+                                            data-title="Quantity"
+                                        >
+                                            <div class="quantity">
+                                                <a
+                                                    href="#"
+                                                    class="
+                                                        botiga-quantity-minus
+                                                    "
+                                                    role="button"
+                                                    >-</a
+                                                >
+                                                <input
+                                                    type="number"
+                                                    id="quantity_615c897d59abb"
+                                                    class="input-text qty text"
+                                                    step="1"
+                                                    min="0"
+                                                    max=""
+                                                    name="cart[e2ef524fbf3d9fe611d5a8e90fefdc9c][qty]"
+                                                    value="{{product.quantity}}"
+                                                    title="Qty"
+                                                    size="4"
+                                                    placeholder=""
+                                                    inputmode="numeric"
+                                                />
+                                                <a
+                                                    href="#"
+                                                    class="botiga-quantity-plus"
+                                                    role="button"
+                                                    >+</a
+                                                >
+                                            </div>
+                                        </td>
+
+                                        <td
+                                            class="product-subtotal"
+                                            data-title="Subtotal"
+                                        >
+                                            <span
+                                                class="
+                                                    woocommerce-Price-amount
+                                                    amount
+                                                "
+                                                ><bdi
+                                                    ><span
+                                                        class="
+                                                            woocommerce-Price-currencySymbol
+                                                        "
+                                                        >&#x20B9;</span
+                                                    >{{product.totalprice}}</bdi
+                                                ></span
+                                            >
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </form>
+
+                        <div class="cart_totals" style="width: 50%;">
+                            <h2>Cart totals</h2>
+
+                            <table
+                                cellspacing="0"
+                                class="shop_table shop_table_responsive"
+                            >
+                                <tr class="cart-subtotal">
+                                    <th>Subtotal</th>
+                                    <td data-title="Subtotal">
+                                        <span
+                                            class="
+                                                woocommerce-Price-amount
+                                                amount
+                                            "
+                                            ><bdi
+                                                ><span
+                                                    class="
+                                                        woocommerce-Price-currencySymbol
+                                                    "
+                                                    >&#x20B9;</span
+                                                >{{totalprice}}</bdi
+                                            ></span
+                                        >
+                                    </td>
+                                </tr>
+
+                                <tr class="order-total">
+                                    <th>Total</th>
+                                    <td data-title="Total">
+                                        <strong
+                                            ><span
+                                                class="
+                                                    woocommerce-Price-amount
+                                                    amount
+                                                "
+                                                ><bdi
+                                                    ><span
+                                                        class="
+                                                            woocommerce-Price-currencySymbol
+                                                        "
+                                                        >&#x20B9;</span
+                                                    >{{totalprice}}</bdi
+                                                ></span
+                                            ></strong
+                                        >
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <div class="wc-proceed-to-checkout">
+                                <a
+                                    href="#!checkout"
+                                    class="
+                                        checkout-button
+                                        button
+                                        alt
+                                        wc-forward
+                                    "
+                                >
+                                    Proceed to checkout</a
+                                >
+                            </div>
+                        </div>
+
+                        </div>
+                        
+                        <div class="cart-collaterals"></div>
+                    </div>
+                </div>
+                <!-- .entry-content -->
+            </article>
+            <!-- #post-28 -->
+        </main>
+        <!-- #main -->
+    </div>
+</div>

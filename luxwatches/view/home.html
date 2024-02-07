@@ -1,0 +1,331 @@
+<div class="content-wrapper">
+	<main id="primary" class="site-main no-sidebar">
+		<article
+			id="post-362"
+			class="post-362 page type-page status-publish hentry"
+		>
+			<div class="entry-content">
+				<div
+					id="athemes-blocks-block-428d2d54"
+					class="
+						wp-block-athemes-athemes-blocks-block-container
+						athemes-blocks-block
+						athemes-blocks-block-428d2d54
+						athemes-blocks-block-container
+						alignfull
+					"
+					style="height: 100vh;"
+				>
+					<div
+						class="
+							athemes-blocks-block-container-wrapper
+							athemes-blocks-block-container-bg-cover
+							athemes-blocks-block-container-bg-effect-scroll
+						"
+						style="height: 100vh; padding: 10px;"
+						id="wrapper"
+					>
+						<img
+							id="hero-image"
+							class="athemes-blocks-background-image"
+							width="2048"
+							height="1138"
+							loading="lazy"
+							srcset="
+								./images/hero-150.jpg 150w,
+								./images/hero-300.jpg 300w,
+								./images/hero-1024.jpg 1024w,
+								./images/hero-2048.jpg 2048w
+							"
+							sizes="(max-width: 2048px) 100vw, 2048px"
+							alt=""
+						/>
+						<div
+							class="
+								athemes-blocks-block-container-wrapper-content
+							"
+							style="height: 40vh; padding: 10px;"
+						>
+							<div class="wp-block-columns">
+								<div
+									class="wp-block-column"
+									style="flex-basis: 67%"
+								>
+									<h2
+										class="
+											has-gigantic-font-size
+										"
+									>
+										A Collection of Luxury Watches is waiting for you.
+									</h2>
+
+									<div class="wp-block-buttons">
+										<div
+											class="wp-block-button"
+										>
+											<a
+												class="
+													wp-block-button__link
+													no-border-radius
+												"
+												href="#!shop"
+												>SHOP NOW</a
+											>
+										</div>
+									</div>
+								</div>
+
+								<div
+									class="wp-block-column"
+									style="flex-basis: 33%"
+								></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div
+					style="height: 50px"
+					aria-hidden="true"
+					class="wp-block-spacer"
+				></div>
+
+
+				<h3 class="has-text-align-center">
+					Categories
+				</h3>
+
+				<div
+					style="height: 50px"
+					aria-hidden="true"
+					class="wp-block-spacer"
+				></div>
+
+				
+				<div class="wp-block-columns">
+					<div class="wp-block-column" ng-repeat="category in categories">
+						<div class="wp-block-image">
+							<figure class="aligncenter size-large">
+								<a
+									href="#!category/{{category.ID}}"
+									><img
+										loading="lazy"
+										width="510"
+										height="490"
+										src="http://localhost:3000/luxwatchesapi/images/{{category.IMAGEPATH}}"
+										alt=""
+										class="wp-image-326"
+								/></a>
+							</figure>
+						</div>
+
+						<p class="has-text-align-center" style="margin: 0;">
+							<a
+								style="text-decoration: none"
+								href="#!category/{{category.ID}}"
+								>{{category.NAME}}</a
+							>
+						</p>
+					</div>
+				</div>
+				<div
+					style="height: 50px"
+					aria-hidden="true"
+					class="wp-block-spacer"
+				></div>
+
+				<div
+					id="athemes-blocks-block-943d931c"
+					class="
+						wp-block-athemes-athemes-blocks-block-container
+						athemes-blocks-block
+						athemes-blocks-block-943d931c
+						athemes-blocks-block-container
+						alignfull
+					"
+				>
+					<div
+						class="
+							athemes-blocks-block-container-wrapper
+							athemes-blocks-block-container-bg-cover
+							athemes-blocks-block-container-bg-effect-scroll
+						"
+						style="height: 100vh; display: flex; align-items: center; justify-content: center;"
+					>
+						<img
+							class="athemes-blocks-background-image"
+							width="1440"
+							height="612"
+							loading="lazy"
+							srcset="
+								./images/highlight-150.jpg 150w,
+								./images/highlight-300.jpg 300w,
+								./images/highlight-1024.jpg 1024w,
+								./images/highlight-1440.jpg 1440w
+							"
+							sizes="(max-width: 1440px) 100vw, 1440px"
+							alt=""
+						/>
+						<div
+							class="
+								athemes-blocks-block-container-wrapper-content
+							"
+						>
+							<h3 class="has-text-align-center" style="color: #ffffff;">
+								Leave Ordinary Behind
+							</h3>
+
+							<p class="has-text-align-center" style="color: #ffffff;">
+								You don't believe in the commonplace, and neither do we. We strive for absolute greatness - and our watches are the living illustration of that ideology. Are you ready to make your mark?
+							</p>
+
+							<div
+								class="
+									wp-block-buttons
+									is-content-justification-center
+								"
+							>
+								<div class="wp-block-button">
+									<a
+										class="
+											wp-block-button__link
+											no-border-radius
+										"
+										href="#!shop"
+										style="background-color: #ffffff; color: #000000; font-weight: 900;"
+										>SHOP NOW</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div
+					style="height: 100px"
+					aria-hidden="true"
+					class="wp-block-spacer"
+				></div>
+
+				<h3 class="has-text-align-center">
+					New Arrival
+				</h3>
+
+				<div
+					style="height: 50px"
+					aria-hidden="true"
+					class="wp-block-spacer"
+				></div>
+
+				<div
+					class="
+						wc-block-grid
+						wp-block-product-new
+						wc-block-product-new
+						has-3-columns
+					"
+				>
+					<ul class="wc-block-grid__products">
+						<li class="wc-block-grid__product product-grid" ng-repeat="product in products">
+							<div class="loop-image-wrap botiga-add-to-cart-button-layout2 botiga-quick-view-button-layout2" style="height: 380px;">
+								<a href="" class="wc-block-grid__product-link">
+									<div class="wc-block-grid__product-image">
+										<img width="420" height="420" src="http://localhost:3000/luxwatchesapi/images/{{product.IMAGEPATH}}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"alt="" loading="lazy"/>
+									</div>
+								</a>
+							</div>
+							<a href="#!product/{{product.ID}}" class="wc-block-grid__product-link">
+								<div class="wc-block-grid__product-title">
+									{{product.NAME}}
+								</div>
+							</a>
+							<div class="wc-block-grid__product-price price">
+								<span class="woocommerce-Price-amount amount">
+									<span class="woocommerce-Price-currencySymbol">
+										&#x20B9;
+									</span>
+									{{product.PRICE}}
+								</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div
+					style="height: 50px"
+					aria-hidden="true"
+					class="wp-block-spacer"
+				></div>
+
+				<div
+					id="athemes-blocks-block-943d931c"
+					class="
+						wp-block-athemes-athemes-blocks-block-container
+						athemes-blocks-block
+						athemes-blocks-block-943d931c
+						athemes-blocks-block-container
+						alignfull
+					"
+				>
+					<div
+						class="
+							athemes-blocks-block-container-wrapper
+							athemes-blocks-block-container-bg-cover
+							athemes-blocks-block-container-bg-effect-scroll
+						"
+						style="height: 100vh; display: flex; align-items: center; justify-content: center;"
+					>
+						<img
+							class="athemes-blocks-background-image"
+							width="1440"
+							height="612"
+							loading="lazy"
+							srcset="
+								./images/collection-150.jpg 150w,
+								./images/collection-300.jpg 300w,
+								./images/collection-1024.jpg 1024w,
+								./images/collection-2048.jpg 1440w
+							"
+							sizes="(max-width: 1440px) 100vw, 1440px"
+							alt=""
+						/>
+						<div
+							class="
+								athemes-blocks-block-container-wrapper-content
+							"
+						>
+							<h3 class="has-text-align-center" style="color: #ffffff;">
+								The Prime Collection
+							</h3>
+
+							<p class="has-text-align-center" style="color: #ffffff;">
+								A stunning classic featuring sapphire, crystals, elegant details, and refined movement backed by a decade-long warranty. Because you shouldn't settle for less.
+							</p>
+
+							<div
+								class="
+									wp-block-buttons
+									is-content-justification-center
+								"
+							>
+								<div class="wp-block-button">
+									<a
+										class="
+											wp-block-button__link
+											no-border-radius
+										"
+										style="background-color: #ffffff; color: #000000; font-weight: 900;"
+										>SHOP NOW</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- .entry-content -->
+		</article>
+		<!-- #post-362 -->
+	</main>
+	<!-- #main -->
+</div>

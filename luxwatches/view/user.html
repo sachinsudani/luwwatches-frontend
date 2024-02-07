@@ -1,0 +1,301 @@
+<div class="container content-wrapper">
+    <div class="row main-row">
+        <main id="primary" class="site-main no-sidebar">
+            <article
+                id="post-30"
+                class="post-30 page type-page status-publish hentry"
+            >
+                <header class="entry-header">
+                    <h1 class="entry-title page-title">
+                        My account
+                    </h1>
+                </header>
+                <!-- .entry-header -->
+
+                <div class="entry-content">
+                    <div class="woocommerce">
+                        <div
+                            class="woocommerce-notices-wrapper"
+                        ></div>
+
+                        <h2>Profile</h2>
+                        <p class="form-row" style="width: 100%; position: relative;">
+                            <button
+                                type="submit"
+                                class="
+                                    woocommerce-button
+                                    button
+                                    woocommerce-form-login__submit
+                                "
+                                name="logout"
+                                value="logout"
+                                id="logout"
+                                style="float: right; transform: translate(0%, -150%);"
+                            >
+                                Logout
+                            </button>
+                        </p>
+
+                        <form
+                            class="
+                                woocommerce-form
+                                woocommerce-form-login
+                                login
+                            "
+                            method="post"
+                        >
+                            <p
+                                class="
+                                    woocommerce-form-row
+                                    woocommerce-form-row--wide
+                                    form-row form-row-wide
+                                "
+                            >
+                                <label for="username"
+                                    >Username&nbsp;
+                                </label>
+                                <input
+                                    type="text"
+                                    class="
+                                        woocommerce-Input
+                                        woocommerce-Input--text
+                                        input-text
+                                    "
+                                    name="username"
+                                    id="username"
+                                    autocomplete="username"
+                                    value=""
+                                    style="width: 100%;"
+                                    ng-model="user['username']"
+                                />
+                            </p>
+                            <p
+                                class="
+                                    woocommerce-form-row
+                                    woocommerce-form-row--wide
+                                    form-row form-row-wide
+                                "
+                            >
+                                <label for="name"
+                                    >Name&nbsp;
+                                </label>
+                                <input
+                                    class="
+                                        woocommerce-Input
+                                        woocommerce-Input--text
+                                        input-text
+                                    "
+                                    type="text"
+                                    name="name"
+                                    id="name"
+                                    autocomplete=""
+                                    style="width: 100%;"
+                                    ng-model="user['name']"
+                                />
+                            </p>
+
+                            <p
+                                class="
+                                    woocommerce-form-row
+                                    woocommerce-form-row--wide
+                                    form-row form-row-wide
+                                "
+                            >
+                                <label for="contactno"
+                                    >Contact No &nbsp;
+                                </label>
+                                <input
+                                    class="
+                                        woocommerce-Input
+                                        woocommerce-Input--text
+                                        input-text
+                                    "
+                                    type="text"
+                                    name="contactno"
+                                    id="contactno"
+                                    autocomplete=""
+                                    style="width: 100%;"
+                                    ng-model="user['contactno']"
+                                />
+                            </p>
+
+                            <p
+                                class="
+                                    woocommerce-form-row
+                                    woocommerce-form-row--wide
+                                    form-row form-row-wide
+                                "
+                            >
+                                <label for="email"
+                                    >Email&nbsp;
+                                </label
+                                >
+                                <input
+                                    class="
+                                        woocommerce-Input
+                                        woocommerce-Input--text
+                                        input-text
+                                    "
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    autocomplete=""
+                                    style="width: 100%;"
+                                    ng-model="user['email']"
+                                />
+                            </p>
+                            <p class="form-row">
+                                <button
+                                    type="submit"
+                                    class="
+                                        woocommerce-button
+                                        button
+                                        woocommerce-form-login__submit
+                                    "
+                                    name="login"
+                                    value="Log in"
+                                    id="updateProfile"
+                                >
+                                    Update Profile
+                                </button>
+                            </p>
+                        </form>
+
+                        <h2>Address</h2>
+
+                        <form
+                            class="
+                                woocommerce-form
+                                woocommerce-form-login
+                                login
+                            "
+                            method="post"
+                        >
+
+                            <p
+                                class="
+                                    woocommerce-form-row
+                                    woocommerce-form-row--wide
+                                    form-row form-row-wide
+                                "
+                            >
+                                <label for="address"
+                                    >Address
+                                </label
+                                >
+                                <input
+                                    class="
+                                        woocommerce-Input
+                                        woocommerce-Input--text
+                                        input-text
+                                    "
+                                    type="text"
+                                    name="address"
+                                    id="address"
+                                    autocomplete=""
+                                    style="width: 100%;"
+                                    ng-model="userAddress['addressline1']"
+                                />
+                            </p>
+
+                            <p
+                                class="
+                                    woocommerce-form-row
+                                    woocommerce-form-row--wide
+                                    form-row form-row-wide
+                                "
+                            >
+                                <label for="city"
+                                    >city
+                                </label>
+                                <input
+                                    class="
+                                        woocommerce-Input
+                                        woocommerce-Input--text
+                                        input-text
+                                    "
+                                    type="text"
+                                    name="city"
+                                    id="city"
+                                    autocomplete=""
+                                    style="width: 100%;"
+                                    ng-model="userAddress['city']"
+                                />
+                            </p>
+
+                            <p
+                                class="
+                                    woocommerce-form-row
+                                    woocommerce-form-row--wide
+                                    form-row form-row-wide
+                                "
+                            >
+                                <label for="pincode"
+                                    >Pin Code&nbsp;
+                                </label
+                                >
+                                <input
+                                    class="
+                                        woocommerce-Input
+                                        woocommerce-Input--text
+                                        input-text
+                                    "
+                                    type="text"
+                                    name="pincode"
+                                    id="pincode"
+                                    autocomplete=""
+                                    style="width: 100%;"
+                                    ng-model="userAddress['pincode']"
+                                />
+                            </p>
+
+                            <p
+                                class="
+                                    woocommerce-form-row
+                                    woocommerce-form-row--wide
+                                    form-row form-row-wide
+                                "
+                            >
+                                <label for="city"
+                                    >Country
+                                </label>
+                                <input
+                                    class="
+                                        woocommerce-Input
+                                        woocommerce-Input--text
+                                        input-text
+                                    "
+                                    type="text"
+                                    name="country"
+                                    id="country"
+                                    autocomplete=""
+                                    style="width: 100%;"
+                                    ng-model="userAddress['country']"
+                                />
+                            </p>
+
+                            <p class="form-row">
+                                <button
+                                    type="submit"
+                                    class="
+                                        woocommerce-button
+                                        button
+                                        woocommerce-form-login__submit
+                                    "
+                                    name="login"
+                                    value="Log in"
+                                    id="updateAddress"
+                                >
+                                    Update Address
+                                </button>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+                <!-- .entry-content -->
+            </article>
+            <!-- #post-30 -->
+        </main>
+        <!-- #main -->
+    </div>
+</div>

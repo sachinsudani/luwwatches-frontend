@@ -1,0 +1,237 @@
+<div class="container" >
+        
+    <!-- Add Product Tab Start -->
+    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+        <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body" style="height: 60vh !important; top: 10%">
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" value="{{product.NAME}}"id="name">
+            </div>
+            <div class="col-md-6">
+                <label for="price" class="form-label">Price</label>
+                <input type="text" class="form-control" value={{product.PRICE}} id="price">
+            </div>
+            <div class="col-12">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" rows="3">{{product.DESCRIPTION}}</textarea>
+            </div>
+        </form>
+    </div>
+    </div>
+
+    <!-- Add Product Tab end -->
+    <!-- product table start -->
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="allproduct" role="tabpanel" aria-labelledby="allproduct-tab">
+            <div style="height: 80vh; overflow: auto">
+                <table class="table table-hover">
+                    <tbody id="productTable">
+                        <tr class="sticky-top shadow-sm" style="background: #fff;">
+                            <th class="px-3">#</th>
+                            <th class="px-3"></th>
+                            <th class="px-3">Name</th>
+                            <th class="px-3">Price</th>
+                            <th class="px-3">Company</th>
+                            <th class="px-3">Category</th>
+                            <th class="px-3">Stock</th>
+                        </tr>
+                        <tr ng-repeat="product in products" class="product" id="{{ product.ID }}" on-finish-render="productDisplay()">
+                            <td class="p-3">{{ product.ID }}</td>
+                            <td>
+                                <div class="image-cover">
+                                    <img src="http://localhost:3000/luxwatchesapi/images/{{product.IMAGEPATH}}" />
+                                </div>
+                            </td>
+                            <td class="p-3">{{ product.NAME }}</td>
+                            <td class="p-3">{{ product.PRICE }}</td>
+                            <td class="p-3">{{ product.COMPANY["NAME"] }}</td>
+                            <td class="p-3">{{ product.CATEGORY["NAME"] }}</td>
+                            <td class="p-3 stock">
+                                <span class="w-100 badge rounded-pill" style="padding: .4rem;">{{ product.STOCK["QUANTITY"] }}</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>        
+        </div>
+        <div class="tab-pane fade" id="instock" role="tabpanel" aria-labelledby="instock-tab">
+            <div style="height: 80vh; overflow: auto">
+                <table class="table table-hover">
+                    <tbody id="productTable">
+                        <tr class="sticky-top shadow-sm" style="background: #fff;">
+                            <th class="px-3">#</th>
+                            <th class="px-3"></th>
+                            <th class="px-3">Name</th>
+                            <th class="px-3">Price</th>
+                            <th class="px-3">Company</th>
+                            <th class="px-3">Category</th>
+                            <th class="px-3">Stock</th>
+                        </tr>
+                        <tr ng-repeat="product in products" class="product" id="{{ product.ID }}" on-finish-render="productDisplay()">
+                            <td class="p-3">{{ product.ID }}</td>
+                            <td>
+                                <div class="image-cover">
+                                    <img src="https://drive.google.com/uc?id={{ product.IMAGEID.split(',')[0] }}" />
+                                </div>
+                            </td>
+                            <td class="p-3">{{ product.NAME }}</td>
+                            <td class="p-3">{{ product.PRICE }}</td>
+                            <td class="p-3">{{ product.COMPANY["NAME"] }}</td>
+                            <td class="p-3">{{ product.CATEGORY["NAME"] }}</td>
+                            <td class="p-3 stock">
+                                <span class="w-100 badge rounded-pill" style="padding: .4rem;">{{ product.STOCK["QUNATITY"] }}</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="tab-pane fade" id="details" role="tabpanel" aria-labelledby="details-tab" >
+            <div class="container d-flex overflow-auto" style="height: 80vh;scroll-behavior: smooth;">
+                <div class="container  w-25">
+                    <nav id="list-example" class="list-group sticky-top fixed">
+                        <a class="list-group-item list-group-item-action border-0 p-0" href="" ng-click="scrollTo('genral')">
+                            General Information
+                            <ul class="nav nav-pills flex-column">
+                                <a class="ms-4 my-0 text-decoration-none" style="font-size: .90rem;" href="" ng-click="scrollTo('product')">Product Information</a>
+                                <a class="ms-4 my-0 text-decoration-none" style="font-size: .90rem;" href="" ng-click="scrollTo('company')">Company Information</a>
+                                <a class="ms-4 my-0 text-decoration-none" style="font-size: .90rem;" href="" ng-click="scrollTo('category')">Category Information</a>
+                            </ul>
+                        </a>
+                        <a class="list-group-item list-group-item-action border-0 p-0" href="#list-item-2">Product Photos</a>
+                        <a class="list-group-item list-group-item-action border-0 p-0" href="#list-item-3">Settings</a>
+                    </nav>
+                </div>
+                <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                    <h4 id="genral">General Information</h4>
+                    <hr>
+                    <h5 id="product" class="text-muted mb-3">Product Information</h5>
+                    <div>
+                        <form class="row g-3">
+                            <div class="col-md-6">
+                                <label for="productid" class="form-label">Product ID</label>
+                                <input type="text" class="form-control" ng-model="singleProduct['ID']" id="productid" disabled>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" value="{{singleProduct['NAME']}}"id="name">
+                            </div>
+                            <div class="col-12">
+                                <label for="price" class="form-label">Price</label>
+                                <input type="text" class="form-control" value={{singleProduct.PRICE}} id="price">
+                            </div>
+                            <div class="col-12">
+                                <label for="description" class="form-label">Description</label>
+                                <textarea class="form-control" id="description" rows="3">{{singleProduct.DESCRIPTION}}</textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <h5 id="company" class="text-muted my-3">Company Information</h5>
+                    <div>
+                        <form class="row g-3" id="company">
+                            <div class="col-md-6">
+                                <label for="companyid" class="form-label">Company ID</label>
+                                <input type="text" class="form-control" id="companyid" value="{{ singleProduct.COMPANY['ID'] }}" disabled>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="cname" class="form-label">Name</label>
+                                <input type="text" class="form-control" value="{{ singleProduct.COMPANY['NAME'] }}" id="cname">
+                            </div>
+                            <div class="col-3 mb-3">
+                                <button class="w-100 btn btn-success" id="addCompany" style="font-weight:600;background-color: var(--bs-indigo);">Add Company</button>
+                            </div>
+                            <div id="companyForm" class="fade show" style="display:none">
+                                <div class="col-12">
+                                    <label class="form-label">Enter Company Name</label>
+                                    <input type="text" class="form-control" id="companyName">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Select Logo</label>
+                                    <input type="file" class="form-control mb-3" id="companyLogo">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <h5 id="category" class="text-muted my-3">Category Information</h5>
+                    <div>
+                        <form class="row g-3" id="company">
+                            <div class="col-md-6">
+                                <label for="companyid" class="form-label">Category ID</label>
+                                <input type="text" class="form-control" id="categoryid" value="{{ singleProduct.CATEGORY['ID'] }}" disabled>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="cname" class="form-label">Name</label>
+                                <input type="text" class="form-control" value="{{ singleProduct.CATEGORY['NAME'] }}" id="cname">
+                            </div>
+                            <div class="col-12">
+                                <label for="description" class="form-label">Category Description</label>
+                                <textarea class="form-control" id="cdescription" rows="3">{{ singleProduct.CATEGORY["DESCRIPTION"] }}</textarea>
+                            </div>
+                            <div class="col-3 mb-3">
+                                <button class="w-100 btn text-white" id="addCategory" style="font-weight:600;background-color: var(--bs-indigo);">Add Category</button>
+                            </div>
+                            <div id="categoryForm" class="fade show" style="display:none">
+                                <div class="col-12">
+                                    <label for="categoryName" class="form-label">Enter Category Name</label>
+                                    <input type="text" class="form-control" id="categoryName">
+                                </div>
+                                <div class="col-12">
+                                    <label for="description" class="form-label">Enter Company Description</label>
+                                    <textarea class="form-control" id="cdescription" rows="3"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Select Image</label>
+                                    <input type="file" class="form-control mb-3" id="companyLogo">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <hr>
+                    <h4 id="list-item-3">Product Photos</h4>
+                    <h6 class="text-muted">All photos</h6>
+                    <div class="container d-flex p-0">
+                        <img src="http://localhost:3000/luxwatchesapi/images/{{singleProduct.IMAGEPATH}}" class="me-2 border border-1 rounded-1" style="height: 8rem; border-color: var(--bs-indigo) !important;;" alt="" srcset="">
+                        <div id="addImage" class="d-flex flex-column align-items-center justify-content-center border border-1 rounded-1" style="height: 8rem; width: 6rem; border-color: var(--bs-indigo) !important;">
+                            <div class="mt-2"><svg class="bi" style="fill: var(--bs-indigo)" width="30" height="30"><use xlink:href="#add"/></svg></div>
+                            <h6 style="font-size: .85rem;" class="mt-1">Add Photo</h6>
+                            <input type="file" id="addProductImages" style="display: none;">
+                        </div>
+                    </div>
+                    <hr>
+                    <h4 id="list-item-4">Settings</h4>
+                    <h5 class="text-muted">Delete Product</h5>
+                    <p class="fs-6">All references of the product are deleted and cannot be recovered</p>
+                    <button id="deleteProduct" class="btn btn-danger" id="addCategory" style="font-weight:600;" data-bs-toggle="modal" data-bs-target="#productDeleteModal">
+                        Delete
+                    </button>
+                    <hr>
+                    
+                    <div class="modal fade" id="productDeleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Delete Product</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h6>Please Write "DELETE" to confirm delete product and delete all the references of the product</h6>
+                                    <input type="text" class="form-control text-danger" id="confirmDelete">
+                                </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-danger">Proceed</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

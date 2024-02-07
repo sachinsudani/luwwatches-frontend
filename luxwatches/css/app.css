@@ -1,0 +1,39 @@
+@media only screen 
+and (min-device-width : 300px) 
+and (max-device-width : 450px) 
+and (orientation : portrait) {
+    #hero-image {
+        width: 450px;
+        height: 400px;
+        /* transform: translate(-50px, 0); */
+    }
+    #athemes-blocks-block-428d2d54 {
+        width: 450px !important;
+        height: 400px !important;
+    }
+}
+
+.alert {
+    background-color: rgb(255, 203, 203);
+    height: 50px;
+    width: 60%;
+    margin: auto;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alert-container {
+    height: 50px;
+    width: 100%;
+    margin: auto;
+    position: absolute;  
+    opacity: 0;
+    bottom: 69%;
+    transition: 1s all ease-in-out;
+}
+
+.active-alert {
+    opacity: 1;
+}
